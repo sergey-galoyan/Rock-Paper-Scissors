@@ -1,0 +1,112 @@
+.games{
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    box-shadow: 0 0 20px 1px;
+}
+.run{
+    display: flex;
+    justify-content: center;
+}
+.hand{
+    width: 200px;
+    height: 200px;
+}
+.anim{
+    animation: shakeY 3s infinite;
+}
+.tool {
+    width: 70px;
+    height: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.tool img {
+    width: 100%;
+    height: auto;
+}
+@keyframes shakeY{
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(0, -90px, -10px);
+        transform: translate3d(0, -10px, -10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 10px, 0);
+    }
+}
+.animate__shakeY {
+    -webkit-animation-name: shakeY;
+    animation-name: shakeY;
+}
+.hand {
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hand.rock {
+    background-image: url("rock.png");
+}
+
+.hand.paper {
+    background-image: url("paper.png");
+}
+
+.hand.scissors {
+    background-image: url("scissors.png");
+}
+.hand.right {
+    transform: scaleX(-1);
+}
+.hand.right.anim {
+    animation: shakeYRight 3s infinite;
+}
+@keyframes shakeYRight {
+    from,
+    to {
+        -webkit-transform: translate3d(0, 0, 0) scaleX(-1);
+        transform: translate3d(0, 0, 0) scaleX(-1);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: translate3d(0, -90px, -10px) scaleX(-1);
+        transform: translate3d(0, -10px, -10px) scaleX(-1);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        -webkit-transform: translate3d(0, 50px, 0) scaleX(-1);
+        transform: translate3d(0, 10px, 0) scaleX(-1);
+    }
+}
